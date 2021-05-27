@@ -3,7 +3,7 @@ const PostService = require("../services/post-service");
 
 const validateOwner = (userId, token) => {
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
-  return decoded.user.id === userId || decoded.user.role === 1;
+  return decoded.user.id === userId || decoded.user.rol === 1;
 };
 
 const addPost = async (req, res) => {
